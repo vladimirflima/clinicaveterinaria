@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clínica Veterinária</title>
+</head>
+<body>
+    <h1>Clínica Veterinária</h1>
+
+    <div class="form-container">
+        <h2>Cadastrar Animal</h2>
+        <form id="animal-form">
+            <label for="name">Nome do Animal:</label>
+            <input type="text" id="name" required placeholder="Exemplo: Adalberto">
+
+            <label for="breed">Raça:</label>
+            <input type="text" id="breed" required placeholder="Exemplo: Labrador">
+
+            <label for="owner">Tutor:</label>
+            <input type="text" id="owner" required placeholder="Exemplo: Gomes">
+
+            <label for="contact">Contato:</label>
+            <input type="text" id="contact" required placeholder="Exemplo: 11999141319">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="animal-list">
+        <h2>Lista de Animais Cadastrados</h2>
+        <ul id="animal-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
