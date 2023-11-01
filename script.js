@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const animalList = document.getElementById('animal-list');
     const animals = [];
 
+    document.querySelector('#sort-alphabetically').addEventListener('click', sortAlphabetically);
+    document.querySelector('#sort-by-entry-time').addEventListener('click', sortByEntryTime);
+
     animalForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -17,33 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         
-        function formatDate(date) {
-            const options = {
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-            };
-        
-            return date.toLocaleDateString('pt-BR', options);
-        }
+        const timestamp = new Date(); // Crie um objeto Date para a data e hora atual
+
         const animal = {
             name: name,
             breed: breed,
             owner: owner,
             contact: contact,
-            timestamp: formatDate(new Date()) // Formata a data e hora
+            timestamp: timestamp // Armazene o objeto Date, não a string formatada
         };
 
         animals.push(animal);
 
         // Limpa o formulário
         animalForm.reset();
-
-        // Ordena a lista em ordem alfabética
-        animals.sort((a, b) => a.name.localeCompare(b.name));
 
         displayAnimalList();
     });
@@ -89,4 +79,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
         displayAnimalList();
     };
-});
+    
+    // Função para formatar a data e hora
+    function formatDate(date) {
+        const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        };
+
+        return date.toLocaleDateString('pt-BR', options);
+    }
+
+     // Função para ordenar a lista em ordem alfabética
+     function sortAlphabetically() {
+        animals.sort((a, b) => a.name.localeCompare(b.name));
+        displayAnimalList();
+    }
+
+    // Função para ordenar a lista por ordem de entrada
+    function sortByEntryTime() {
+        animals.sort((a, b) => a.timestamp - b.timestamp);
+        displayAnimalList();
+    }
+
+    // Chame a função para exibir a lista no início
+    displayAnimalList();
+    }
+);
