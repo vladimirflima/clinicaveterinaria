@@ -37,7 +37,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         displayAnimalList();
     });
-
+    
+    function formatDate(date) {
+        const options = {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        };
+    
+        return date.toLocaleTimeString('pt-BR', options);
+    }
+    
     function displayAnimalList() {
         // Limpa a lista
         animalList.innerHTML = '';
@@ -50,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <strong>Raça:</strong> ${animal.breed}<br>
                 <strong>Dono:</strong> ${animal.owner}<br>
                 <strong>Contato:</strong> ${animal.contact}<br>
-                <strong>Entrada:</strong> ${animal.timestamp}<br>
+                <strong>Entrada:</strong> ${formatDate(animal.timestamp)}<br>
                 <button onclick="editAnimal(${index})">Editar</button>
                 <button onclick="deleteAnimal(${index})">Excluir</button>
             `;
@@ -80,20 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
         displayAnimalList();
     };
     
-    // Função para formatar a data e hora
-    function formatDate(date) {
-        const options = {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-        };
-
-        return date.toLocaleDateString('pt-BR', options);
-    }
-
+    
      // Função para ordenar a lista em ordem alfabética
      function sortAlphabetically() {
         animals.sort((a, b) => a.name.localeCompare(b.name));
