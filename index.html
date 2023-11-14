@@ -7,7 +7,16 @@
     <title>Sistema Veterinário</title>
 </head>
 <body>
-    <h1>Sistema Veterinário</h1>
+    <header>
+        <h1>Sistema Veterinário</h1>
+        <div class="menu">
+            <button>Usuário</button>
+            <button>Animais Cadastrados</button>
+            <button>Donos Cadastrados</button>
+            <button id="open-help">Ajuda</button>
+        </div>
+        
+    </header>
 
     <div class="form-container">
         <h2>Cadastrar Animal</h2>
@@ -35,6 +44,19 @@
         <ul id="animal-list"></ul>
     </div>
 
+    <footer>
+        Desenvolvido por Vladimir Lima
+    </footer>
+    
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-help">&times;</span>
+            <h2>Entre em Contato</h2>
+            <p>Email: vladimirflima@outlook.com</p>
+            <p>Telefone: (85) 99914-1919</p>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

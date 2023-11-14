@@ -1,62 +1,95 @@
-/* Estilos gerais */
+/* Estilos para o cabeçalho */
+header {
+    background-color: #808080;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.menu button {
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005A8E;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho */
 h1 {
-    background-color: #333;
+    background-color: #0078D4;
     color: #fff;
     text-align: center;
     padding: 20px;
     margin: 0;
 }
 
-/* Container do formulário */
-.form-container {
+.form-container, .animal-list {
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
 }
 
-/* Estilos para campos de entrada e botões */
 form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 input[type="text"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 button[type="submit"] {
-    background-color: #0074d9;
+    background-color: #0078D4;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 8px 16px;
+    padding: 10px 18px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Lista de animais */
+button[type="submit"]:hover {
+    background-color: #005A8E;
+}
+
 .animal-list {
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
 }
 
-/* Lista de animais - Itens da lista */
 ul {
     list-style: none;
     padding: 0;
@@ -65,18 +98,60 @@ ul {
 li {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 16px;
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
-/* Botões de ordenação */
-.sort-buttons {
+
+/* Estilo para o modal de ajuda */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #0078D4;
+    color: #fff;
     text-align: center;
-    margin: 20px 0;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Estilos para dispositivos móveis (media query) */
 @media screen and (max-width: 768px) {
     .form-container, .animal-list {
         margin: 10px;
@@ -85,9 +160,7 @@ li {
         padding: 10px;
     }
     h1 {
-        padding: 10px;
-    }
-    .sort-buttons {
-        margin: 10px 0;
+        padding: 15px;
     }
 }
+

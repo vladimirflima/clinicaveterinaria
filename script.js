@@ -105,5 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Chame a função para exibir a lista no início
     displayAnimalList();
+
+    
     }
 );
