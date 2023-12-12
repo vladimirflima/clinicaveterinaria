@@ -1,8 +1,22 @@
+document.getElementById('open-owner').addEventListener('click', function () {
+    // Use window.location para redirecionar para o arquivo tutor.html
+    window.location.href = 'tutor.html';
+    // Adicione aqui o código para exibir a lista de tutores (se necessário)
+});
+document.getElementById('open-usuario').addEventListener('click', function () {
+    window.location.href = 'usuario.html';
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const animalForm = document.getElementById('animal-form');
     const animalList = document.getElementById('animal-list');
     const animals = [];
+    const developerInfo = document.getElementById('developer-info');
+    const contactInfo = document.getElementById('contact-info');
 
+    developerInfo.addEventListener('click', function () {
+        contactInfo.style.display = (contactInfo.style.display === 'none') ? 'block' : 'none';
+    })
     document.querySelector('#sort-alphabetically').addEventListener('click', sortAlphabetically);
     document.querySelector('#sort-by-entry-time').addEventListener('click', sortByEntryTime);
 
@@ -40,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function formatDate(date) {
         const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
