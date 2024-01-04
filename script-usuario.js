@@ -6,6 +6,12 @@ document.getElementById('open-owner').addEventListener('click', function () {
 document.getElementById('open-usuario').addEventListener('click', function () {
     window.location.href = 'usuario.html';
 });
+document.getElementById('open-animal').addEventListener('click', function () {
+    window.location.href = 'animal.html';
+});
+document.getElementById('open-help').addEventListener('click', function () {
+    window.location.href = 'help.html';
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('login-form');
@@ -13,17 +19,21 @@ document.addEventListener('DOMContentLoaded', function () {
     loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Obter os valores do formulário
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Adicione aqui a lógica de autenticação, por exemplo, verificar se o usuário e senha são válidos
+        // Adicione lógica para verificar o login (pode ser comparando com dados armazenados localmente ou enviando para o servidor)
 
-        // Exemplo simples de verificação (substitua por sua lógica real)
-        if (username === 'usuario' && password === 'senha') {
+        // Exemplo de verificação local (não seguro para produção)
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        if (username === storedUsername && password === storedPassword) {
             alert('Login bem-sucedido!');
+            // Redirecione para a página principal ou outra página desejada após o login
+            window.location.href = 'index.html';
         } else {
-            alert('Usuário ou senha inválidos. Tente novamente.');
+            alert('Usuário ou senha incorretos. Tente novamente.');
         }
     });
 });
