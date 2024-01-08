@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const signupForm = document.getElementById('signup-form');
+    const developerInfo = document.getElementById('developer-info');
+    const contactInfo = document.getElementById('contact-info');
+   
+    developerInfo.addEventListener('click', function () {
+        contactInfo.style.display = (contactInfo.style.display === 'none') ? 'block' : 'none';
+    })
 
     signupForm.addEventListener('submit', function (e) {
         e.preventDefault();
