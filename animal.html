@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastrar Animal - Sistema Veterinário</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema Veterinário</h1>
+        <div class="menu">
+            <button id="open-usuario">Usuário</button>
+            <button id="open-animal">Animais Cadastrados</button>
+            <button id="open-owner">Tutores Cadastrados</button>
+            <button id="open-help">Ajuda</button>
+        </div>
+        
+    </header>
+
+    <div class="form-container">
+        <h2>Cadastrar Animal</h2>
+        <form id="animal-form">
+            <label for="name">Nome do Animal:</label>
+            <input type="text" id="name" required placeholder="Exemplo: Adalberto">
+
+            <label for="breed">Raça:</label>
+            <input type="text" id="breed" required placeholder="Exemplo: Labrador">
+
+            <label for="owner">Tutor:</label>
+            <input type="text" id="owner" required placeholder="Exemplo: Gomes">
+
+            <label for="contact">Contato:</label>
+            <input type="text" id="contact" required placeholder="Exemplo: 11988141319">
+            <br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="animal-list">
+        <h2>Lista de Animais Cadastrados</h2>
+        <input type="text" id="search-bar" placeholder="Buscar por nome...">
+        <br>
+        <button id="sort-alphabetically">Ordem Alfabética</button>
+        <button id="sort-by-entry-time">Ordem de Entrada</button>
+        <ul id="animal-list"></ul>
+    </div>
+
+    <footer id="developer-info">
+        Desenvolvido por Vladimir Lima
+        <div id="contact-info" style="display: none;">
+            <p>Email: vladimirflima@outlook.com</p>
+            <p>Telefone: (85) 99914-1919</p>
+            <a href="https://www.linkedin.com/in/vladimirflima/">LinkedIn</a> <br><br>
+            <a href="https://github.com/vladimirflima">GitHub!</a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
