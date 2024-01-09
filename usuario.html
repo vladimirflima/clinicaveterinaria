@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Cadastrar Tutores - Sistema Veterinário</title>
+    <title>Perfil do Usuário - Sistema Veterinário</title>
 </head>
 <body>
     <header>
@@ -14,30 +14,33 @@
             <button id="open-animal">Animais Cadastrados</button>
             <button id="open-owner">Tutores Cadastrados</button>
             <button id="open-help">Ajuda</button>
+            <button id="view-profile">Ver Perfil</button>
+            <button id="change-password">Trocar Senha</button>
             <button id="logout">Sair</button>
         </div>
-        
     </header>
 
-    <div class="form-container">
-        <h2>Cadastrar Tutor</h2>
-        <form id="animal-form">
-            <label for="name">Nome do Tutor:</label>
-            <input type="text" id="name" required placeholder="Exemplo: Fábio">         
-            <label for="contact">Contato:</label>
-            <input type="text" id="contact" required placeholder="Exemplo: 11999141319">
-            <br>
-            <button type="submit">Cadastrar</button>
+    <div class="profile-container" id="profile-container">
+        <h2>Perfil do Usuário</h2>
+        <p id="user-name"></p>
+    </div>
+
+    <div class="change-password-container" id="change-password-container" style="display: none;">
+        <h2>Trocar Senha</h2>
+        <form id="change-password-form">
+            <label for="current-password">Senha Atual:</label>
+            <input type="password" id="current-password" required>
+
+            <label for="new-password">Nova Senha:</label>
+            <input type="password" id="new-password" required>
+
+            <button type="submit">Trocar Senha</button>
         </form>
     </div>
 
-    <div class="owner-list">
-        <h2>Lista de Tutores Cadastrados</h2>
-        <input type="text" id="search-bar" placeholder="Buscar por nome...">
-        <br>
-        <button id="sort-alphabetically">Ordem Alfabética</button>
-        <button id="sort-by-entry-time">Ordem de Entrada</button>
-        <ul id="owner-list"></ul>
+    <div class="options-container">
+        <button id="view-profile">Ver Perfil</button>
+        <button id="change-password">Trocar Senha</button>
     </div>
 
     <footer id="developer-info">
@@ -49,7 +52,7 @@
             <a href="https://github.com/vladimirflima">GitHub!</a>
         </div>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script src="script-usuario.js"></script>
 </body>
 </html>

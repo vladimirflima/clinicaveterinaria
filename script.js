@@ -6,6 +6,12 @@ document.getElementById('open-owner').addEventListener('click', function () {
 document.getElementById('open-usuario').addEventListener('click', function () {
     window.location.href = 'usuario.html';
 });
+document.getElementById('open-animal').addEventListener('click', function () {
+    window.location.href = 'animal.html';
+});
+document.getElementById('open-help').addEventListener('click', function () {
+    window.location.href = 'help.html';
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     const animalForm = document.getElementById('animal-form');
