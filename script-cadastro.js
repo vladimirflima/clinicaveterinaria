@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         alert('Cadastro realizado com sucesso! Faça login agora.');
  
-        window.location.href = 'login.html';
+        window.location.href = 'inicio.html';
     });
 });

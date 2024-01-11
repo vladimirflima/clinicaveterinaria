@@ -1,7 +1,5 @@
 document.getElementById('open-owner').addEventListener('click', function () {
-    // Use window.location para redirecionar para o arquivo tutor.html
     window.location.href = 'tutor.html';
-    // Adicione aqui o código para exibir a lista de tutores (se necessário)
 });
 document.getElementById('open-usuario').addEventListener('click', function () {
     window.location.href = 'usuario.html';
@@ -11,6 +9,9 @@ document.getElementById('open-animal').addEventListener('click', function () {
 });
 document.getElementById('open-help').addEventListener('click', function () {
     window.location.href = 'help.html';
+});
+document.getElementById('logout').addEventListener('click', function () {
+    window.location.href = 'inicio.html';
 });
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -1,8 +1,31 @@
+document.getElementById('open-owner').addEventListener('click', function () {
+    window.location.href = 'tutor.html';
+});
+document.getElementById('open-usuario').addEventListener('click', function () {
+    window.location.href = 'usuario.html';
+});
+document.getElementById('open-animal').addEventListener('click', function () {
+    window.location.href = 'animal.html';
+});
+document.getElementById('open-help').addEventListener('click', function () {
+    window.location.href = 'help.html';
+});
+document.getElementById('logout').addEventListener('click', function () {
+    window.location.href = 'inicio.html';
+});
+  
+    
 document.addEventListener('DOMContentLoaded', function () {
     const profileContainer = document.getElementById('profile-container');
     const changePasswordContainer = document.getElementById('change-password-container');
     const userNameElement = document.getElementById('user-name');
     const changePasswordForm = document.getElementById('change-password-form');
+    const developerInfo = document.getElementById('developer-info');
+    const contactInfo = document.getElementById('contact-info');
+
+    developerInfo.addEventListener('click', function () {
+        contactInfo.style.display = (contactInfo.style.display === 'none') ? 'block' : 'none';
+    })
 
     const storedUsername = localStorage.getItem('username') || 'vladimir';
 
@@ -33,12 +56,5 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Senha trocada com sucesso!');
         // Limpa os campos do formulário
         changePasswordForm.reset();
-    });
-
-    // Lógica para logout
-    document.getElementById('logout').addEventListener('click', function () {
-        // Adicione lógica para limpar os dados de autenticação e redirecionar para a página de login
-        localStorage.clear(); // Limpa todos os dados do localStorage (ajuste conforme necessário)
-        window.location.href = 'login.html'; // Redireciona para a página de login
     });
 });
