@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const developerInfo = document.getElementById('developer-info');
     const contactInfo = document.getElementById('contact-info');
     
-    // Obtenha os dados do localStorage ou use valores padrão se não existirem
     const storedUsername = localStorage.getItem('username') || 'vladimir';
     const storedPassword = localStorage.getItem('password') || '1234';
 

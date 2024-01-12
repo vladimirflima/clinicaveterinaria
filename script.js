@@ -27,6 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#sort-alphabetically').addEventListener('click', sortAlphabetically);
     document.querySelector('#sort-by-entry-time').addEventListener('click', sortByEntryTime);
 
+    // Função para salvar os animais no localStorage
+    function saveAnimalsToLocalStorage() {
+        localStorage.setItem('animals', JSON.stringify(animals));
+    }
+
+    // Função para carregar animais do localStorage
+    function loadAnimalsFromLocalStorage() {
+        const savedAnimals = localStorage.getItem('animals');
+        return savedAnimals ? JSON.parse(savedAnimals) : [];
+    }
+
+    // Carregar animais do localStorage ao iniciar a página
+    animals.push(...loadAnimalsFromLocalStorage());
+    displayAnimalList();
+    
     animalForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -41,20 +56,21 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         
-        const timestamp = new Date(); // Crie um objeto Date para a data e hora atual
+        const timestamp = new Date(); // Cria um objeto Date para a data e hora atual
 
         const animal = {
             name: name,
             breed: breed,
             owner: owner,
             contact: contact,
-            timestamp: timestamp // Armazene o objeto Date, não a string formatada
+            timestamp: timestamp // Armazena o objeto Date, não a string formatada
         };
 
         animals.push(animal);
 
-        // Limpa o formulário
-        animalForm.reset();
+        animalForm.reset(); // Limpa o formulário
+
+        saveAnimalsToLocalStorage();  // Salva os animais atualizados no localStorage
 
         displayAnimalList();
     });
