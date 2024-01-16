@@ -50,11 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const owner = document.getElementById('owner').value;
         const contact = document.getElementById('contact').value;
 
-        // Validação do campo de telefone
         if (!/^\d{11,12}$/.test(contact)) {
             alert('O número de telefone deve conter de 11 a 12 dígitos numéricos.');
             return;
-        }
+        } // Validação do campo de telefone
         
         const timestamp = new Date(); // Cria um objeto Date para a data e hora atual
 
@@ -69,8 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
         animals.push(animal);
 
         animalForm.reset(); // Limpa o formulário
-
-        saveAnimalsToLocalStorage();  // Salva os animais atualizados no localStorage
 
         displayAnimalList();
     });
@@ -126,7 +123,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.deleteAnimal = function (index) {
         // Remove o animal da lista
         animals.splice(index, 1);
-
+        
+        saveAnimalsToLocalStorage();  // Salva os animais atualizados no localStorage
+        
         displayAnimalList();
     };
     

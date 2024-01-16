@@ -13,8 +13,7 @@ document.getElementById('open-help').addEventListener('click', function () {
 document.getElementById('logout').addEventListener('click', function () {
     window.location.href = 'inicio.html';
 });
-  
-    
+   
 document.addEventListener('DOMContentLoaded', function () {
     const profileContainer = document.getElementById('profile-container');
     const changePasswordContainer = document.getElementById('change-password-container');

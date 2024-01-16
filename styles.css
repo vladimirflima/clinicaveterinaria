@@ -197,3 +197,45 @@ footer {
     }
 }
 
+#help-form {
+   
+}
+
+#help-form label {
+    
+}
+
+#help-form input[type="text"], #help-form input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#help-form textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 90%;
+    max-height: 200px; /* Defina o valor desejado para a altura máxima */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    resize: vertical; /* Permite redimensionar verticalmente apenas */
+}
+
+#help-form button[type="submit"] {
+
+}
+
+#help-form button[type="submit"]:hover {
+
+}
+
+#help-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}

@@ -8,16 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Sistema Veterinário</h1>
-        <div class="menu">
-            <button id="open-usuario">Usuário</button>
-            <button id="open-animal">Animais Cadastrados</button>
-            <button id="open-owner">Tutores Cadastrados</button>
-            <button id="open-help">Ajuda</button>
-            <button id="logout">Sair</button>
-        </div>    
+        <h1>Sistema Veterinário</h1>      
     </header>
-   
+    <div class="form-container">
+        <h2>Ajuda</h2>
+        <form id="help-form">      
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" required placeholder="Seu Nome">
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" id="email" required placeholder="Seu E-mail">
+
+            <label for="message">Sua Mensagem:</label>
+            <textarea id="message" required placeholder="Digite sua mensagem..."></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
     <footer id="developer-info">
         Desenvolvido por Vladimir Lima
         <div id="contact-info" style="display: none;">
@@ -27,6 +34,6 @@
             <a href="https://github.com/vladimirflima">GitHub!</a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script-help.js"></script>
 </body>
 </html>
