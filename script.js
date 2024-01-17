@@ -11,13 +11,14 @@ document.getElementById('open-help').addEventListener('click', function () {
     window.location.href = 'help.html';
 });
 document.getElementById('logout').addEventListener('click', function () {
+    localStorage.removeItem('user');
     window.location.href = 'inicio.html';
 });
 
 document.addEventListener('DOMContentLoaded', function () {
     const animalForm = document.getElementById('animal-form');
     const animalList = document.getElementById('animal-list');
-    const animals = [];
+    const animals = loadAnimalsFromLocalStorage();
     const developerInfo = document.getElementById('developer-info');
     const contactInfo = document.getElementById('contact-info');
 
@@ -27,17 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#sort-alphabetically').addEventListener('click', sortAlphabetically);
     document.querySelector('#sort-by-entry-time').addEventListener('click', sortByEntryTime);
 
-    // Função para salvar os animais no localStorage
-    function saveAnimalsToLocalStorage() {
-        localStorage.setItem('animals', JSON.stringify(animals));
-    }
-
-    // Função para carregar animais do localStorage
-    function loadAnimalsFromLocalStorage() {
-        const savedAnimals = localStorage.getItem('animals');
-        return savedAnimals ? JSON.parse(savedAnimals) : [];
-    }
-
+   
     // Carregar animais do localStorage ao iniciar a página
     animals.push(...loadAnimalsFromLocalStorage());
     displayAnimalList();
@@ -69,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         animalForm.reset(); // Limpa o formulário
 
+        saveAnimalsToLocalStorage();
+        
         displayAnimalList();
     });
     
@@ -103,6 +96,17 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
             animalList.appendChild(animalEntry);
         });
+    }
+
+    // Função para salvar os animais no localStorage
+     function saveAnimalsToLocalStorage() {
+        localStorage.setItem('animals', JSON.stringify(animals));
+    }
+
+    // Função para carregar animais do localStorage
+    function loadAnimalsFromLocalStorage() {
+        const savedAnimals = localStorage.getItem('animals');
+        return savedAnimals ? JSON.parse(savedAnimals) : [];
     }
 
     // Função para editar um animal
