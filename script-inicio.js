@@ -1,3 +1,7 @@
+document.getElementById('open-help').addEventListener('click', function () {
+    window.location.href = 'help2.html';
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('login-form');
     const developerInfo = document.getElementById('developer-info');

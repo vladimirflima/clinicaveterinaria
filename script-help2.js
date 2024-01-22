@@ -1,19 +1,3 @@
-document.getElementById('open-owner').addEventListener('click', function () {
-    window.location.href = 'tutor.html';
-});
-document.getElementById('open-usuario').addEventListener('click', function () {
-    window.location.href = 'usuario.html';
-});
-document.getElementById('open-animal').addEventListener('click', function () {
-    window.location.href = 'animal.html';
-});
-document.getElementById('open-help').addEventListener('click', function () {
-    window.location.href = 'help.html';
-});
-document.getElementById('logout').addEventListener('click', function () {
-    window.location.href = 'inicio.html';
-});
-
 document.addEventListener('DOMContentLoaded', function () {
     const helpForm = document.getElementById('help-form');
     const developerInfo = document.getElementById('developer-info');
