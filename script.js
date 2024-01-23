@@ -12,7 +12,7 @@ document.getElementById('open-help').addEventListener('click', function () {
 });
 document.getElementById('logout').addEventListener('click', function () {
     localStorage.removeItem('user');
-    window.location.href = 'inicio.html';
+    window.location.href = 'index.html';
 });
 
 document.addEventListener('DOMContentLoaded', function () {

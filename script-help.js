@@ -11,7 +11,7 @@ document.getElementById('open-help').addEventListener('click', function () {
     window.location.href = 'help.html';
 });
 document.getElementById('logout').addEventListener('click', function () {
-    window.location.href = 'inicio.html';
+    window.location.href = 'index.html';
 });
 
 document.addEventListener('DOMContentLoaded', function () {

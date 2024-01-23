@@ -22,6 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         alert('Cadastro realizado com sucesso! Faça login agora.');
  
-        window.location.href = 'inicio.html';
+        window.location.href = 'index.html';
     });
 });
