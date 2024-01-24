@@ -1,5 +1,5 @@
 document.getElementById('open-help').addEventListener('click', function () {
-    window.location.href = 'help.html';
+    window.location.href = 'help2.html';
 });
 
 document.addEventListener('DOMContentLoaded', function () {

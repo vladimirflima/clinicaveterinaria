@@ -1,3 +1,7 @@
+document.getElementById('open-index').addEventListener('click', function () {
+    window.location.href = 'index.html';
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const helpForm = document.getElementById('help-form');
     const developerInfo = document.getElementById('developer-info');
