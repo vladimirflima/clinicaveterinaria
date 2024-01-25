@@ -18,6 +18,8 @@ document.getElementById('logout').addEventListener('click', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const animalForm = document.getElementById('animal-form');
     const animalList = document.getElementById('animal-list');
+    const ownerForm = document.getElementById('owner-form');
+    const ownerList = document.getElementById('owner-list');  
     const animals = loadAnimalsFromLocalStorage();
     const developerInfo = document.getElementById('developer-info');
     const contactInfo = document.getElementById('contact-info');
@@ -28,8 +30,80 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#sort-alphabetically').addEventListener('click', sortAlphabetically);
     document.querySelector('#sort-by-entry-time').addEventListener('click', sortByEntryTime);
 
-   
-    // Carregar animais do localStorage ao iniciar a página
+//INICIO TUTOR
+    ownerForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const contact = document.getElementById('contact').value;
+
+        const owner = {
+            name: name,
+            contact: contact,
+        };
+
+        owners.push(owner);
+
+        ownerForm.reset();
+
+        saveOwnersToLocalStorage();
+
+        displayOwnerList();
+    });
+
+    // Função para salvar os tutores no localStorage
+    function saveOwnersToLocalStorage() {
+        localStorage.setItem('owners', JSON.stringify(owners));
+    }
+
+    // Função para carregar tutores do localStorage
+    function loadOwnersFromLocalStorage() {
+        const savedOwners = localStorage.getItem('owners');
+        return savedOwners ? JSON.parse(savedOwners) : [];
+    }
+
+    // Função para editar um tutor
+    window.editOwner = function (index) {
+        const owner = owners[index];
+        document.getElementById('name').value = owner.name;
+        document.getElementById('contact').value = owner.contact;
+
+        // Remover o tutor da lista
+        owners.splice(index, 1);
+
+        displayOwnerList();
+    };
+
+    // Função para excluir um tutor
+    window.deleteOwner = function (index) {
+        // Remover o tutor da lista
+        owners.splice(index, 1);
+
+        saveOwnersToLocalStorage();  // Salvar os tutores atualizados no localStorage
+
+        displayOwnerList();
+    };
+
+
+    function displayOwnerList() {
+        // Limpar a lista
+        ownerList.innerHTML = '';
+
+        // Exibir a lista atualizada
+        owners.forEach((owner, index) => {
+            const ownerEntry = document.createElement('li');
+            ownerEntry.innerHTML = `
+                <strong>Nome:</strong> ${owner.name}<br>
+                <strong>Contato:</strong> ${owner.contact}<br>
+                <button onclick="editOwner(${index})">Editar</button>
+                <button onclick="deleteOwner(${index})">Excluir</button>
+            `;
+            ownerList.appendChild(ownerEntry);
+        });
+    }
+      
+//FIM TUTOR
+//INICIO ANIMAL
     animals.push(...loadAnimalsFromLocalStorage());
     displayAnimalList();
     
