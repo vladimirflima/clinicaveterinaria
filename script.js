@@ -17,7 +17,7 @@ document.getElementById('logout').addEventListener('click', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const animalForm = document.getElementById('animal-form');
-    const animalList = document.getElementById('animal-list');
+    const animalListContainer = document.getElementById('animal-list');
     const ownerForm = document.getElementById('owner-form');
     const ownerList = document.getElementById('owner-list');  
     const animals = loadAnimalsFromLocalStorage();
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function displayAnimalList() {
         // Limpa a lista
-        animalList.innerHTML = '';
+        animalListContainer.innerHTML = '';
 
         // Exibe a lista atualizada
         animals.forEach((animal, index) => {
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <button onclick="editAnimal(${index})">Editar</button>
                 <button onclick="deleteAnimal(${index})">Excluir</button>
             `;
-            animalList.appendChild(animalEntry);
+            animalListContainer.appendChild(animalEntry);
         });
     }
 
