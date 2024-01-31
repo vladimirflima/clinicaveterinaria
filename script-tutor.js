@@ -117,5 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
             ownerList.appendChild(ownerEntry);
         });
     }
+    displayOwnerList();
 }
 );
