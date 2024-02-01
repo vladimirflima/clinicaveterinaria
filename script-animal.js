@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const animals = loadAnimalsFromLocalStorage();
     const developerInfo = document.getElementById('developer-info');
     const contactInfo = document.getElementById('contact-info');
+    const contactInput = document.getElementById('contact');
 
     developerInfo.addEventListener('click', function () {
         contactInfo.style.display = (contactInfo.style.display === 'none') ? 'block' : 'none';
@@ -29,13 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#sort-alphabetically').addEventListener('click', sortAlphabetically);
     document.querySelector('#sort-by-entry-time').addEventListener('click', sortByEntryTime);
 
+    contactInput.addEventListener('input', function () {
+        contactInput.value = contactInput.value.replace(/\D/g, '');
+    });
+
     animalForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
         const name = document.getElementById('name').value;
         const breed = document.getElementById('breed').value;
         const owner = document.getElementById('owner').value;
-        const contact = document.getElementById('contact').value;
+        const contact = contactInput.value;
 
         if (!/^\d{11,12}$/.test(contact)) {
             alert('O número de telefone deve conter de 11 a 12 dígitos numéricos.');
