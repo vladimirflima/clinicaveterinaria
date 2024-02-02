@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const owner = {
             name: name,
             contact: contact,
+            timestamp: new Date()
         };
         
 
@@ -129,13 +130,13 @@ document.addEventListener('DOMContentLoaded', function () {
     };
      // Função para ordenar a lista em ordem alfabética
      function sortAlphabetically() {
-        animals.sort((a, b) => a.name.localeCompare(b.name));
+        owners.sort((a, b) => a.name.localeCompare(b.name));
         displayOwnerList();
     }
 
     // Função para ordenar a lista por ordem de entrada
     function sortByEntryTime() {
-        animals.sort((a, b) => a.timestamp - b.timestamp);
+        owners.sort((a, b) => a.timestamp - b.timestamp);
         displayOwnerList();
     }
     
