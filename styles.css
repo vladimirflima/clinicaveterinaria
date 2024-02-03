@@ -1,3 +1,50 @@
+/* Estilo para o ícone de menu de hambúrguer */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo para o menu suspenso */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0078D4;
+    z-index: 1;
+}
+
+.menu:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Adicione a classe 'responsive' quando a largura da tela for menor */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu button {
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu button {
+        display: none;
+    }
+
+    .menu button.active {
+        display: block;
+    }
+}
+
+
 /* Estilos para o cabeçalho */
 header {
     background-color: #0078D4;

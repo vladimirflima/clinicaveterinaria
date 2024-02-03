@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const developerInfo = document.getElementById('developer-info');
     const contactInfo = document.getElementById('contact-info');
     const contactInput = document.getElementById('contact');
+    
+    const menuIcon = document.querySelector('.menu-icon');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const menuButtons = document.querySelectorAll('.menu button');
 
     developerInfo.addEventListener('click', function () {
         contactInfo.style.display = (contactInfo.style.display === 'none') ? 'block' : 'none';
@@ -32,6 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     contactInput.addEventListener('input', function () {
         contactInput.value = contactInput.value.replace(/\D/g, '');
+    });
+    
+    menuIcon.addEventListener('click', function () {
+        console.log('Clique no ícone do menu');
+        dropdownMenu.classList.toggle('active');
+    });
+
+    menuButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Oculte o menu suspenso após clicar em um item
+            dropdownMenu.classList.remove('active');
+        });
+    });
+
+    window.addEventListener('resize', function () {
+        dropdownMenu.classList.remove('active');
     });
 
     animalForm.addEventListener('submit', function (e) {
