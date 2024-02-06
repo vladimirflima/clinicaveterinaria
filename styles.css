@@ -86,6 +86,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    
 }
 
 h1 {
@@ -115,6 +116,12 @@ h1 {
 .login-container a:hover {
     text-decoration: underline;
 }
+
+
+.form-container {
+    max-width: 1000px;
+}
+
 
 .form-container, .animal-list, .login-container {
     background-color: #fff;
@@ -165,17 +172,18 @@ button[type="submit"]:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
-    
-
+    max-width: 1000px;  
 }
+
 .owner-list {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
-    
+    max-width: 1000px;   
 }
+
 ul {
     list-style: none;
     padding: 0;
