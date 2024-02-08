@@ -89,6 +89,13 @@ body {
     
 }
 
+.container-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 h1 {
     background-color: #0078D4;
     color: #fff;
@@ -129,6 +136,7 @@ h1 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
+    max-width: 1000px;
 }
 
 form label {
