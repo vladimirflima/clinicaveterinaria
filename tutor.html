@@ -19,25 +19,27 @@
         
     </header>
 
-    <div class="form-container">
-        <h2>Cadastrar Tutor</h2>
-        <form id="owner-form">
-            <label for="name">Nome do Tutor:</label>
-            <input type="text" id="name" required placeholder="Exemplo: Fábio">         
-            <label for="contact">Contato:</label>
-            <input type="text" id="contact" required placeholder="Exemplo: 11999141319">
-            <br>
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
+    <div class="container-centralizado">
+        <div class="form-container">
+            <h2>Cadastrar Tutor</h2>
+            <form id="owner-form">
+                <label for="name">Nome do Tutor:</label>
+                <input type="text" id="name" required placeholder="Exemplo: Fábio">         
+                <label for="contact">Contato:</label>
+                <input type="text" id="contact" required placeholder="Exemplo: 11999141319">
+                <br>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
 
-    <div class="owner-list">
-        <h2>Lista de Tutores Cadastrados</h2>
-        <input type="text" id="search-bar" placeholder="Buscar por nome...">
-        <br>
-        <button id="sort-alphabetically">Ordem Alfabética</button>
-        <button id="sort-by-entry-time">Ordem de Entrada</button>
-        <ul id="owner-list"></ul>
+        <div class="owner-list">
+            <h2>Lista de Tutores Cadastrados</h2>
+            <input type="text" id="search-bar" placeholder="Buscar por nome...">
+            <br>
+            <button id="sort-alphabetically">Ordem Alfabética</button>
+            <button id="sort-by-entry-time">Ordem de Entrada</button>
+            <ul id="owner-list"></ul>
+        </div>
     </div>
 
     <footer id="developer-info">
