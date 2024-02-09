@@ -90,10 +90,11 @@ body {
 }
 
 .container-centralizado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px
 }
 
 h1 {
@@ -117,6 +118,11 @@ h1 {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
     max-width: 400px;
 }
 
@@ -124,13 +130,25 @@ h1 {
     text-decoration: underline;
 }
 
-
-.form-container {
-    max-width: 1000px;
+.animal-list {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    max-width: 1000px;  
 }
 
+.owner-list {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    max-width: 1000px;   
+}
 
-.form-container, .animal-list, .login-container {
+.form-container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -174,23 +192,7 @@ button[type="submit"]:hover {
     background-color: #005A8E;
 }
 
-.animal-list {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    max-width: 1000px;  
-}
 
-.owner-list {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    max-width: 1000px;   
-}
 
 ul {
     list-style: none;
