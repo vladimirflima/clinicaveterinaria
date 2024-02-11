@@ -13,32 +13,34 @@
             <button id="open-index">Inicio</button> 
         </div>
     </header>
-    <div class="form-container">
-        <h2>Ajuda</h2>
-        <form id="help-form">      
-            <label for="help-option">Selecione uma opção de ajuda:</label>
-            <select id="help-option" required>
-                <option value="" disabled selected>Escolha uma opção</option>
-                <option value="pet-not-appearing">Meu pet não está aparecendo</option>
-                <option value="exam-not-available">Meu pet aparece mas o exame dele não está disponível</option>
-                <option value="prescription-not-available">Meu veterinário disse que a receita ficaria disponível no portal, mas não está aparecendo</option>
-                <option value="schedule-appointment">Quero realizar um agendamento no Sistema Veterinário</option>
-                <option value="update-contacts">Não sei como alterar meus contatos</option>
-            </select>
-            
-            <label for="name">Seu Nome:</label>
-            <input type="text" id="name" required placeholder="Seu Nome">
+    <div class="container-centralizado">
+        <div class="form-container">
+            <h2>Ajuda</h2>
+                <form id="help-form">      
+                    <label for="help-option">Selecione uma opção de ajuda:</label>
+                    <select id="help-option" required>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="pet-not-appearing">Meu pet não está aparecendo</option>
+                        <option value="exam-not-available">Meu pet aparece mas o exame dele não está disponível</option>
+                        <option value="prescription-not-available">Meu veterinário disse que a receita ficaria disponível no portal, mas não está aparecendo</option>
+                        <option value="schedule-appointment">Quero realizar um agendamento no Sistema Veterinário</option>
+                        <option value="update-contacts">Não sei como alterar meus contatos</option>
+                    </select>
+                    
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" required placeholder="Seu Nome">
 
-            <label for="email">Seu E-mail:</label>
-            <input type="email" id="email" required placeholder="Seu E-mail">
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" required placeholder="Seu E-mail">
 
-            <label for="message">Sua Mensagem:</label>
-            <textarea id="message" required placeholder="Digite sua mensagem..."></textarea>
+                    <label for="message">Sua Mensagem:</label>
+                    <textarea id="message" required placeholder="Digite sua mensagem..."></textarea>
 
-            <button type="submit">Enviar Mensagem</button>
-        </form>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+        </div>
     </div>
-    <footer id="developer-info">
+<footer id="developer-info">
         Desenvolvido por Vladimir Lima
         <div id="contact-info" style="display: none;">
             <p>Email: vladimirflima@outlook.com</p>

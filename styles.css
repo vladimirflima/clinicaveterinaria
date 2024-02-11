@@ -27,10 +27,6 @@
         align-items: center;
     }
 
-    .menu button {
-        margin-bottom: 10px;
-    }
-
     .menu-icon {
         display: block;
     }
@@ -89,13 +85,6 @@ body {
     
 }
 
-.container-centralizado {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px
-}
 
 h1 {
     background-color: #0078D4;
@@ -105,7 +94,7 @@ h1 {
     margin: 0;
 }
 .login-container p {
-    margin-bottom: 12px; /* Aumenta a margem abaixo do link "Clique aqui caso tenha esquecido a senha ou login" */
+    margin-bottom: 12px;
 }
 
 .login-container a {
@@ -128,6 +117,14 @@ h1 {
 
 .login-container a:hover {
     text-decoration: underline;
+}
+
+.container-centralizado {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px
 }
 
 .animal-list {
@@ -192,8 +189,6 @@ button[type="submit"]:hover {
     background-color: #005A8E;
 }
 
-
-
 ul {
     list-style: none;
     padding: 0;
@@ -256,14 +251,13 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .form-container, .animal-list, .form-container, .owner-list, .login-container {
+    header, h1, .container, .login-container, .animal-list, .owner-list, .form-container, #help-container, #profile-container, #change-password-container, .options-container {
+        padding: 10px;
         margin: 10px;
     }
-    .form-container, .animal-list, .form-container, .owner-list, .login-container, li {
-        padding: 10px;
-    }
+
     h1 {
-        padding: 15px;
+        font-size: calc(1.5rem + 2vw); /* Ajuste dinâmico do tamanho do texto */
     }
 }
 .open-index {
