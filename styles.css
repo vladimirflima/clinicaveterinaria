@@ -251,13 +251,14 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    header, h1, .container, .login-container, .animal-list, .owner-list, .form-container, #help-container, #profile-container, #change-password-container, .options-container {
-        padding: 10px;
+    .form-container, .animal-list, .form-container, .owner-list, .login-container {
         margin: 10px;
     }
-
+    .form-container, .animal-list, .form-container, .owner-list, .login-container, li {
+        padding: 10px;
+    }
     h1 {
-        font-size: calc(1.5rem + 2vw); /* Ajuste dinâmico do tamanho do texto */
+        padding: 15px;
     }
 }
 .open-index {
