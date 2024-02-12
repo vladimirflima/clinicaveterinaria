@@ -129,7 +129,7 @@ h1 {
 
 .container-owner-centralizado {
     position: absolute;
-    top: 65%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;
