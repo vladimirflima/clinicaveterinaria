@@ -121,7 +121,7 @@ h1 {
 
 .help-container-centralizado {
     position: absolute;
-    top: 42%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px
@@ -129,7 +129,7 @@ h1 {
 
 .container-owner-centralizado {
     position: absolute;
-    top: 35%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;
@@ -137,15 +137,7 @@ h1 {
 
 .container-animal-centralizado {
     position: absolute;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-}
-
-.container-help-centralizado {
-    position: absolute;
-    top: 42%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;
