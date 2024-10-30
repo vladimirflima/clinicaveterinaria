@@ -9,49 +9,50 @@
 <body>
     <header>
         <h1>Sistema Veterinário</h1>
-            <div class="menu">
-                    <button id="open-usuario">Usuário</button>
-                    <button id="open-animal">Animais Cadastrados</button>
-                    <button id="open-owner">Tutores Cadastrados</button>
-                    <button id="open-help">Ajuda</button>
-                    <button id="logout">Sair</button>
-                    <div class="menu-icon">&#9776;</div>
-                <div class="dropdown-menu">
-                    <button id="menu-usuario">Usuário</button>
-                    <button id="menu-animal">Animais Cadastrados</button>
-                    <button id="menu-owner">Tutores Cadastrados</button>
-                    <button id="menu-help">Ajuda</button>
-                    <button id="menu-logout">Sair</button>
-                </div>
-            </div>        
+        <div class="menu">
+            <button id="open-usuario">Usuário</button>
+            <button id="open-animal">Animais Cadastrados</button>
+            <button id="open-owner">Tutores Cadastrados</button>
+            <button id="open-help">Ajuda</button>
+            <button id="logout">Sair</button>
+            <div class="menu-icon">&#9776;</div>
+        <div class="dropdown-menu">
+            <button id="open-usuario">Usuário</button>
+            <button id="open-animal">Animais Cadastrados</button>
+            <button id="open-owner">Tutores Cadastrados</button>
+            <button id="open-help">Ajuda</button>
+            <button id="logout">Sair</button>
+        </div>
+        </div>
+        
     </header>
-    <div class="container-animal-centralizado">
-        <div class="form-container">
-            <h2>Cadastrar Animal</h2>
-            <form id="animal-form">
-                <label for="name">Nome do Animal:</label>
-                <input type="text" id="name" required placeholder="Exemplo: Adalberto">
+    
+    <div class="form-container">
+        <h2>Cadastrar Animal</h2>
+        <form id="animal-form">
+            <label for="name">Nome do Animal:</label>
+            <input type="text" id="name" required placeholder="Exemplo: Adalberto">
 
-                <label for="breed">Raça:</label>
-                <input type="text" id="breed" required placeholder="Exemplo: Labrador">
+            <label for="breed">Raça:</label>
+            <input type="text" id="breed" required placeholder="Exemplo: Labrador">
 
-                <label for="owner">Tutor:</label>
-                <input type="text" id="owner" required placeholder="Exemplo: Gomes">
+            <label for="owner">Tutor:</label>
+            <input type="text" id="owner" required placeholder="Exemplo: Gomes">
 
-                <label for="contact">Contato:</label>
-                <input type="text" id="contact" required placeholder="Exemplo: 11988141319">
-                <br>
-                <button type="submit">Cadastrar</button>
-            </form>
-        </div>
-        <div class="animal-list">
-            <h2>Lista de Animais Cadastrados</h2>
-            <input type="text" id="search-bar" placeholder="Buscar por nome...">
+            <label for="contact">Contato:</label>
+            <input type="text" id="contact" required placeholder="Exemplo: 11988141319">
             <br>
-            <button id="sort-alphabetically">Ordem Alfabética</button>
-            <button id="sort-by-entry-time">Ordem de Entrada</button>
-            <ul id="animal-list"></ul>
-        </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="animal-list">
+        <h2>Lista de Animais Cadastrados</h2>
+        <input type="text" id="search-bar" placeholder="Buscar por nome...">
+        <br>
+        <button id="sort-alphabetically">Ordem Alfabética</button>
+        <button id="sort-by-entry-time">Ordem de Entrada</button>
+        <ul id="animal-list"></ul>
     </div>
 
     <footer id="developer-info">
