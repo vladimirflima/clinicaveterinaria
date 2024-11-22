@@ -25,11 +25,25 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const menuIcon = document.querySelector('.menu-icon');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-    const menuButtons = document.querySelectorAll('.menu button');
+    const dropdownButtons = dropdownMenu.querySelectorAll('button'); // Botões dentro do dropdown
 
     developerInfo.addEventListener('click', function () {
         contactInfo.style.display = (contactInfo.style.display === 'none') ? 'block' : 'none';
     })
+
+    menuIcon.addEventListener('click', function () {
+        console.log('este foi um clique no ícone do menu');
+        console.log('Dropdown menu:', dropdownMenu); // Confirma se a classe está sendo adicionada
+        dropdownMenu.classList.toggle('active'); //Alterna a visibilidade do menu
+    });
+
+
+    dropdownButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            console.log('Clique em um botão do menu dropdown');
+            dropdownMenu.classList.remove('active'); // Oculta o menu após o clique
+        });
+    });
 
     document.querySelector('#sort-alphabetically').addEventListener('click', sortAlphabetically);
     document.querySelector('#sort-by-entry-time').addEventListener('click', sortByEntryTime);
@@ -38,17 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
         contactInput.value = contactInput.value.replace(/\D/g, '');
     });
     
-    menuIcon.addEventListener('click', function () {
-        console.log('Clique no ícone do menu');
-        dropdownMenu.classList.toggle('active');
-    });
-
-    menuButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            // Oculte o menu suspenso após clicar em um item
-            dropdownMenu.classList.remove('active');
-        });
-    });
 
     window.addEventListener('resize', function () {
         dropdownMenu.classList.remove('active');

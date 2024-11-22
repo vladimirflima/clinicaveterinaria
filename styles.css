@@ -7,28 +7,70 @@
 
 /* Estilo para o menu suspenso */
 .dropdown-menu {
-    display: none;
+    display: none; /* Oculto inicialmente */
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Garante a centralização completa */
     background-color: #0078D4;
-    z-index: 1;
+    z-index: 10; /* Certifique-se de que esteja acima de outros elementos */
+    padding: 10px;
+    max-height: 300px; /* Altura máxima, se aplicável */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Pequena sombra para destaque */
 }
 
-.menu:hover .dropdown-menu {
-    display: flex;
+.dropdown-menu button {
+    background-color: #fff;
+    color: #0078D4;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0; /* Espaçamento entre os botões */
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.dropdown-menu button:hover {
+    background-color: #005A8E;
+    color: #fff;
+}
+
+.dropdown-menu.active {
+    display: flex; /* Aparece ao adicionar a classe `active` */
+    //min-height: 200px; /* Garante que o menu tenha espaço para os botões */
+    //min-width: 200px;
+    padding: 10px; /* Espaçamento interno para os itens */
+   
+}
+
+.desktop-menu {
+    display: block; /* Exibe os botões no desktop */
+}
+
 
 /* Adicione a classe 'responsive' quando a largura da tela for menor */
 @media screen and (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 10px); /* 10px de espaçamento abaixo do menu-icon */
+        left: 0; /* Alinha à esquerda */
+        transform: none; /* Remove a centralização horizontal */
+        width: 100%; /* Faz o menu ocupar toda a largura do container */
+    }
+
+    .menu button {
+        margin-bottom: 10px;
     }
 
     .menu-icon {
-        display: block;
+        display: block; /* Visível em telas pequenas */
+    }
+
+    .desktop-menu {
+        display: none; /* Oculta os botões no mobile */
     }
 
     .menu button {
@@ -85,6 +127,13 @@ body {
     
 }
 
+.container-centralizado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px
+}
 
 h1 {
     background-color: #0078D4;
@@ -94,7 +143,7 @@ h1 {
     margin: 0;
 }
 .login-container p {
-    margin-bottom: 12px;
+    margin-bottom: 12px; /* Aumenta a margem abaixo do link "Clique aqui caso tenha esquecido a senha ou login" */
 }
 
 .login-container a {
@@ -117,30 +166,6 @@ h1 {
 
 .login-container a:hover {
     text-decoration: underline;
-}
-
-.help-container-centralizado {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px
-}
-
-.container-owner-centralizado {
-    position: absolute;
-    top: 73%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-}
-
-.container-animal-centralizado {
-    position: absolute;
-    top: 73%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
 }
 
 .animal-list {
@@ -205,6 +230,8 @@ button[type="submit"]:hover {
     background-color: #005A8E;
 }
 
+
+
 ul {
     list-style: none;
     padding: 0;
@@ -266,74 +293,16 @@ footer {
     width: 100%;
 }
 
-        @media screen and (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .menu button {
-                margin-bottom: 10px;
-            }
-
-            .menu-icon {
-                display: block;
-            }
-
-            .menu button {
-                display: none;
-            }
-
-            .menu button.active {
-                display: block;
-            }
-            .login-container {
-                text-align: center;
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #fff;
-                border-radius: 8px;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                margin: 20px;
-                max-width: 400px;
-            }
-            
-            .login-container a:hover {
-                text-decoration: underline;
-            }
-            
-            .help-container-centralizado {
-                position: absolute;
-                top: 21%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 90%;
-                height: 20%
-            }
-            
-            .container-centralizado {
-                position: absolute;
-                top: 50%;
-                left: 45%;
-                transform: translate(-50%, -50%);
-                width: 90%;
-                height: 81%
-            }
-            
-            /*
-            .form-container, .animal-list, .owner-list, .login-container, .options-container {
-                margin: 10px;
-            }
-            .form-container, .animal-list, .owner-list, .login-container, .options-container, */
-            li {
-                padding: 10px;
-            }
-            h1 {
-                padding: 15px;
-            }
+@media screen and (max-width: 768px) {
+    .form-container, .animal-list, .form-container, .owner-list, .login-container {
+        margin: 10px;
+    }
+    .form-container, .animal-list, .form-container, .owner-list, .login-container, li {
+        padding: 10px;
+    }
+    h1 {
+        padding: 15px;
+    }
 }
 .open-index {
     

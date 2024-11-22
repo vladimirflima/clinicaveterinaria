@@ -10,21 +10,22 @@
     <header>
         <h1>Sistema Veterinário</h1>
         <div class="menu">
-            <button id="open-usuario">Usuário</button>
-            <button id="open-animal">Animais Cadastrados</button>
-            <button id="open-owner">Tutores Cadastrados</button>
-            <button id="open-help">Ajuda</button>
-            <button id="logout">Sair</button>
+            <button id="open-usuario" class="desktop-menu">Usuário</button>
+            <button id="open-animal" class="desktop-menu">Animais Cadastrados</button>
+            <button id="open-owner" class="desktop-menu">Tutores Cadastrados</button>
+            <button id="open-help" class="desktop-menu">Ajuda</button>
+            <button id="logout" class="desktop-menu">Sair</button>
+            
             <div class="menu-icon">&#9776;</div>
-        <div class="dropdown-menu">
-            <button id="open-usuario">Usuário</button>
-            <button id="open-animal">Animais Cadastrados</button>
-            <button id="open-owner">Tutores Cadastrados</button>
-            <button id="open-help">Ajuda</button>
-            <button id="logout">Sair</button>
-        </div>
-        </div>
-        
+            
+            <div class="dropdown-menu">
+                <button id="open-usuario">Usuário</button>
+                <button id="open-animal">Animais</button>
+                <button id="open-owner">Tutores</button>
+                <button id="open-help">Ajuda</button>
+                <button id="logout">Sair</button>
+            </div>
+        </div>  
     </header>
     
     <div class="form-container">
@@ -55,7 +56,7 @@
         <ul id="animal-list"></ul>
     </div>
 
-    <footer id="developer-info">
+   <footer id="developer-info">
         Desenvolvido por Vladimir Lima
         <div id="contact-info" style="display: none;">
             <p>Email: vladimirflima@outlook.com</p>
